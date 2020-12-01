@@ -22,6 +22,7 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --background: #212529;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -29,6 +30,10 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html {
@@ -43,18 +48,45 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    background: #212529;
+    background: var(--background);
     color: #fff;
-    text-align: left;
-}
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-    font-family: "Lora","Courier New",monospace,serif;
-    font-weight: 700;
-    text-transform: uppercase;
     text-align: center;
 }
-.h1, h1 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    font-family: "Lora", "Courier New", monospace, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
     font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+    background: var(--background);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-right: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    border: 2px solid transparent !important;
+    white-space: nowrap;
+    height: 40px;
+}
+
+a.hover:hover,
+a.selected {
+    text-decoration: none;
+    background: #fff;
+    color: #000;
 }
